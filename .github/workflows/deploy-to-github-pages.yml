@@ -41,13 +41,13 @@ jobs:
           if npm run | grep -q "test"; then
             npm test
           else
-            echo "ℹ️ No test script defined, skipping tests"
+            echo "No test script defined, skipping tests"
           fi
 
       - name: Verify build output
         run: |
           if [ ! -d "build" ]; then
-            echo "❌ Build output directory 'build' does not exist"
+            echo "Build output directory 'build' does not exist"
             exit 1
           fi
 
